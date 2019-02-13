@@ -1,13 +1,13 @@
 {
-  "main.css": "/clickme/static/css/main.332bae7f.chunk.css",
-  "main.js": "/clickme/static/js/main.b2081563.chunk.js",
-  "main.js.map": "/clickme/static/js/main.b2081563.chunk.js.map",
+  "main.css": "/clickme/static/css/main.f424c968.chunk.css",
+  "main.js": "/clickme/static/js/main.30823545.chunk.js",
+  "main.js.map": "/clickme/static/js/main.30823545.chunk.js.map",
   "runtime~main.js": "/clickme/static/js/runtime~main.7bffb628.js",
   "runtime~main.js.map": "/clickme/static/js/runtime~main.7bffb628.js.map",
   "static/js/2.ba2021e6.chunk.js": "/clickme/static/js/2.ba2021e6.chunk.js",
   "static/js/2.ba2021e6.chunk.js.map": "/clickme/static/js/2.ba2021e6.chunk.js.map",
   "index.html": "/clickme/index.html",
-  "precache-manifest.13b989413739d003258b49a6ca3219b0.js": "/clickme/precache-manifest.13b989413739d003258b49a6ca3219b0.js",
+  "precache-manifest.dca8fd26640c1ac13f16e75aa0dadd43.js": "/clickme/precache-manifest.dca8fd26640c1ac13f16e75aa0dadd43.js",
   "service-worker.js": "/clickme/service-worker.js",
-  "static/css/main.332bae7f.chunk.css.map": "/clickme/static/css/main.332bae7f.chunk.css.map"
+  "static/css/main.f424c968.chunk.css.map": "/clickme/static/css/main.f424c968.chunk.css.map"
 }
