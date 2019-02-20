@@ -45,14 +45,12 @@ class App extends Component {
     if (this.state.clicked.indexOf(id) === -1)  {
       this.handleScore();
       this.setState({ 
-        clicked: this.state.clicked.concat(id)})
+        clicked: this.state.clicked.concat(id),
+        message: ""})
       console.log("new click")
     } else {
       // Has been clicked already -> Loss
       console.log("abc")
-      this.setState({
-        message: "Oh no! You have already clicked on that one!"
-      })
       this.handleReset();
     }
   };
@@ -64,9 +62,11 @@ class App extends Component {
     });
     if (newScore >= this.state.highscore) {
       console.log("current score",this.state.currentScore)
-      this.setState({ highscore: newScore });
+      this.setState({ 
+        highscore: newScore,
+        message: "Nice! A new High Score!" });
     }
-    else if (newScore === 12) {
+    if (this.state.currentScore === 12) {
       this.setState({message: "Wow! A perfect Score! Your memory must be really sharp..."})
     }
     this.shuffleFriends(friends);
@@ -76,7 +76,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       highscore: this.state.highscore,
-      message: "",
+      message: "Good Game. Play again?",
       clicked: []
     });
     this.shuffleFriends(friends);
@@ -86,15 +86,19 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Wine List</Title>
-        <Scores 
+        
+        <Title>Remember The Wine List</Title>
+        
+        <Scores
         scores={this.state.currentScore} 
         highscore={this.state.highscore}
         message={this.state.message}
         />
-        <div className = "row"></div>
+        
+    <div className = "row">
+    
         {this.state.friends.map(friend => (
-          <FriendCard
+          <FriendCard className="col-4"
             removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
@@ -102,9 +106,11 @@ class App extends Component {
             image={friend.image}
             handleClick={this.handleClick}
             handleReset={this.handleReset}
-            // handleReset={this.handleReset}
           />
         ))}
+        </div>
+        
+        
       </Wrapper>
     );
   }
